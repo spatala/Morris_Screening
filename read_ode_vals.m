@@ -43,7 +43,7 @@ parfor npath = 1:n1_paths
                 end
             end
         else
-            ind_vals(npath, nvar) = 2;
+            ind_vals(npath, nvar) = 1;
 %             ct_npaths = ct_npaths + 1;
             break;
         end
