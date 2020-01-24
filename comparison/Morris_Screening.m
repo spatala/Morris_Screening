@@ -126,7 +126,8 @@ function dv = derive(fv, indmat, nparams, ntraj, delta)
        ee = zeros(nparams, size(ff,2));
        ee(ind(:,1), :) = (ff(ind(:,2),:)-ff(ind(:,3),:))/delta;
        
-       dv = [dv ; ee']; 
+      
+       dv = [dv ; reshape(ee, [1 prod(size(ee))])]; 
 
        fs=fs+nparams+1;
        is=is+nparams;
